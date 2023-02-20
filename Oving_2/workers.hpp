@@ -5,32 +5,33 @@
 #ifndef OVING_2_WORKERS_HPP
 #define OVING_2_WORKERS_HPP
 
+#include <functional>
+#include <iostream>
+#include <list>
+#include <vector>
+#include <thread>
+#include <atomic>
+#include <condition_variable>
 
-class workers {
-    workers worker_threads(4);
-    workers event_loop(1);
+class Workers{
+    std::atomic_bool run;
+    //bool run;
+    int number_threads;
+    std::list<std::function<void()>> task_queue;
+    //std::vector<std::thread> thread_pool;
+    std::vector<std::thread> worker_threads;
+    std::condition_variable cv;
+    std::mutex task_mutex;
 
-    worker_threads.start(); //
-    event_loop.start(); //
-
-    worker_threads.post([] {
-        // Task A
-    });
-    worker_threads.post([] {
-        // Task B
-        // Might run in parallel
-    });
-    event_loop.post([] {
-        // Task C
-        // Might run in parallel with Task A and B
-    });
-    event_loop.post([] {
-        // Task D
-        // Will run after task C // Might run in parallel
-    });
-        worker_threads.join(); // Calls join()
-        event_loop.join(); // Calls join()
+public:
+    explicit Workers(int number_threads){
+        this->number_threads = number_threads;
+    }
+    void post(const std::function<void()>& task);
+    void post_timeout(const std::function<void()>& task, int pause);
+    void start();
+    void stop();
+    void join();
 };
-
 
 #endif //OVING_2_WORKERS_HPP

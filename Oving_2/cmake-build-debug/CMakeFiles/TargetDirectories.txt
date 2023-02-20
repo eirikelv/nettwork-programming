@@ -1,3 +1,3 @@
-/Users/eirikelvestad/Desktop/Dokumenter/4. Semester/IDATT2104-Nettverksutvikling/Øvinger/Oving_2/cmake-build-debug/CMakeFiles/Oving_2.dir
-/Users/eirikelvestad/Desktop/Dokumenter/4. Semester/IDATT2104-Nettverksutvikling/Øvinger/Oving_2/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/eirikelvestad/Desktop/Dokumenter/4. Semester/IDATT2104-Nettverksutvikling/Øvinger/Oving_2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/eirikelvestad/Desktop/Dokumenter/4. Semester/IDATT2104-Nettverksutvikling/nettwork-programming/Oving_2/cmake-build-debug/CMakeFiles/Oving_2.dir
+/Users/eirikelvestad/Desktop/Dokumenter/4. Semester/IDATT2104-Nettverksutvikling/nettwork-programming/Oving_2/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/eirikelvestad/Desktop/Dokumenter/4. Semester/IDATT2104-Nettverksutvikling/nettwork-programming/Oving_2/cmake-build-debug/CMakeFiles/rebuild_cache.dir

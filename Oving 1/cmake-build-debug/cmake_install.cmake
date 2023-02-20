@@ -1,4 +1,4 @@
-# Install script for directory: /Users/eirikelvestad/Desktop/Dokumenter/4. Semester/IDATT2104-Nettverksutvikling/Øvinger/Oving 1
+# Install script for directory: /Users/eirikelvestad/Desktop/Dokumenter/4. Semester/IDATT2104-Nettverksutvikling/nettwork-programming/Oving 1
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/eirikelvestad/Desktop/Dokumenter/4. Semester/IDATT2104-Nettverksutvikling/Øvinger/Oving 1/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/eirikelvestad/Desktop/Dokumenter/4. Semester/IDATT2104-Nettverksutvikling/nettwork-programming/Oving 1/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
