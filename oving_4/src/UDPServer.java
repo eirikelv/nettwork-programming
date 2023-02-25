@@ -5,7 +5,7 @@ import java.util.Objects;
 
 public class UDPServer {
     public static void main(String[] args) throws IOException{
-        DatagramSocket server = new DatagramSocket(8080);
+        DatagramSocket server = new DatagramSocket(1234);
 
         byte[] serverBuff = new byte[256];
         DatagramPacket serverDp = new DatagramPacket(serverBuff, serverBuff.length);
