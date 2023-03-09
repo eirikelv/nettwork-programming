@@ -8,8 +8,8 @@
   </div>
   <div class="compiledComponent">
     <div class="compileFeedback">
-      <!--<div v-if="!showLoader">comiled code comes here:</div>-->
-      <!--<div v-if="showLoader" class="loader"> </div>-->
+      <div v-if="!loading">comiled code comes here:</div>
+      <div v-if="loading" class="loader">Loading...</div>
       <div v-if="error" class="error">{{ error }}</div>
       <div v-if="compiledCode" class="compildeCode">{{ compiledCode }}</div>
     </div>
@@ -32,12 +32,8 @@ export default {
   methods: {
     compile() {
       if(!this.code.trim()){
-          console.log(this.code);
-          console.log("ble en feil linje 36");
           return; 
       }
-      console.log("det finnes input")
-      console.log(this.code.trim())
       this.error = null;
       this.loading = true;
       axios.post("http://localhost:1234/compiler", {
@@ -45,7 +41,6 @@ export default {
       })
 
           .then(response =>{
-            console.log(response);
             this.compiledCode = response.data.compiledCode;
           })
           .catch(error => {
@@ -53,7 +48,6 @@ export default {
             this.error = error;
           })
           .finally( ()=> {
-            console.log("finally")
             this.loading = false;
       });
     }
